@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+   <children>
+      <AnchorPane layoutX="427.0" prefHeight="687.0" prefWidth="916.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="441.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/locked-logo.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="496.0" layoutY="274.0" text="Login" textFill="#e80f0f">
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Label>
+            <Label layoutX="251.0" layoutY="378.0" text="Username">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="251.0" layoutY="463.0" text="Password">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <TextField fx:id="username" layoutX="430.0" layoutY="382.0" prefHeight="32.0" prefWidth="232.0" />
+            <TextField fx:id="password" layoutX="430.0" layoutY="463.0" prefHeight="32.0" prefWidth="232.0" />
+            <Button fx:id="signInBtn" layoutX="509.0" layoutY="554.0" mnemonicParsing="false" onAction="#signIn" prefHeight="25.0" prefWidth="77.0" style="-fx-background-color: BLUE; -fx-cursor: hand;" text="ENTER">
+               <textFill>
+                  <LinearGradient endX="0.2238095238095238" endY="0.3142857142857143" startX="0.22380952380952382">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="#05010100" offset="0.24054982817869416" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <ProgressIndicator fx:id="pi" layoutX="212.0" layoutY="151.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="358.0" prefWidth="450.0" visible="false" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="anchorPane" layoutX="1.0" prefHeight="687.0" prefWidth="426.0" style="-fx-background-color: #cdd1ce;">
+         <children>
+            <Label contentDisplay="CENTER" layoutX="9.0" layoutY="265.0" prefHeight="90.0" prefWidth="408.0" text="🅵🆁🆄🅸🆃🆂" textAlignment="CENTER" textFill="#56832a">
+               <font>
+                  <Font name="Book Antiqua" size="56.0" />
+               </font>
+            </Label>
+            <Label layoutX="237.0" layoutY="355.0" text="Market" textFill="#41e111">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="56.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="156.0" fitWidth="232.0" layoutX="91.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

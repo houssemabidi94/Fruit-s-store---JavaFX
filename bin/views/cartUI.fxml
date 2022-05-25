@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CartController">
+	<children>
+		<BorderPane layoutX="6.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+			<left>
+				<VBox prefHeight="700.0" prefWidth="823.0" styleClass="right-bar" stylesheets="@../values/style.css" BorderPane.alignment="CENTER">
+					<children>
+						<HBox alignment="CENTER" prefHeight="110.0" prefWidth="200.0">
+							<children>
+                        <ImageView fitHeight="65.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/logo.png" />
+                           </image>
+                        </ImageView>
+								<Label prefHeight="49.0" prefWidth="128.0" text="Fruits" textFill="#878787">
+									<font>
+										<Font name="Cambria Bold" size="40.0" />
+									</font>
+								</Label>
+								<Label text="Market" textFill="#878787">
+									<font>
+										<Font name="Cambria" size="40.0" />
+									</font>
+								</Label>
+							</children>
+						</HBox>
+                  <HBox VBox.vgrow="ALWAYS">
+                     <children>
+                        <ScrollPane prefHeight="590.0" prefWidth="828.0">
+                           <content>
+                              <GridPane fx:id="grid">
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </HBox>
+					</children>
+				</VBox>
+			</left>
+			<center>
+				<VBox prefHeight="700.0" prefWidth="453.0" BorderPane.alignment="CENTER">
+					<children>
+						<HBox alignment="CENTER" prefHeight="65.0" prefWidth="200.0">
+							<VBox.margin>
+								<Insets left="20.0" right="20.0" />
+							</VBox.margin>
+							<children>
+								<Pane prefHeight="65.0" prefWidth="393.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <ImageView fx:id="homeBtn" fitHeight="50.0" fitWidth="55.0" layoutX="364.0" layoutY="8.0" onMouseClicked="#goToHome" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                                 <image>
+                                    <Image url="@../images/home.png" />
+                                 </image>
+                              </ImageView>
+                           </children></Pane>
+								<Label prefHeight="62.0" prefWidth="64.0" textFill="#878787">
+									<font>
+										<Font name="Cambria" size="18.0" />
+									</font>
+								</Label>
+							</children>
+						</HBox>
+                  <HBox alignment="CENTER" prefHeight="93.0" prefWidth="845.0">
+                     <children>
+                        <Label contentDisplay="CENTER" text="My Order Panel " textFill="#1844cc">
+                           <font>
+                              <Font name="Book Antiqua" size="29.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+					</children>
+				</VBox>
+			</center>
+		</BorderPane>
+	</children>
+</AnchorPane>

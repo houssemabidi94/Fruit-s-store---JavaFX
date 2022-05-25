@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ui" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.fruitsStockController">
+	<children>
+		<BorderPane layoutX="6.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+			<left>
+				<VBox prefHeight="200.0" prefWidth="435.0" styleClass="right-bar" stylesheets="@../values/style.css" BorderPane.alignment="CENTER">
+					<children>
+						<HBox alignment="CENTER" prefHeight="110.0" prefWidth="200.0">
+							<children>
+                        <ImageView fitHeight="65.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/logo.png" />
+                           </image>
+                        </ImageView>
+								<Label prefHeight="49.0" prefWidth="128.0" text="Fruits" textFill="#878787">
+									<font>
+										<Font name="Cambria Bold" size="40.0" />
+									</font>
+								</Label>
+								<Label text="Market" textFill="#878787">
+									<font>
+										<Font name="Cambria" size="40.0" />
+									</font>
+								</Label>
+							</children>
+						</HBox>
+						<Pane prefHeight="57.0" prefWidth="435.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <HBox fx:id="printBtn" alignment="CENTER" layoutX="50.0" layoutY="231.0" onMouseClicked="#printDoc" prefHeight="100.0" prefWidth="336.0" style="-fx-cursor: hand;" styleClass="shopping-online-card" stylesheets="@../values/style.css">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="100.0" prefWidth="203.0">
+                                 <children>
+                                    <Label prefHeight="30.0" prefWidth="97.0" text="Print" textFill="#878787">
+                                       <font>
+                                          <Font name="Cambria Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <ImageView fitHeight="49.0" fitWidth="56.0" opacity="0.48" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/imprimante.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                     </children></Pane>
+						<Pane prefHeight="57.0" prefWidth="435.0" VBox.vgrow="ALWAYS" />
+					</children>
+				</VBox>
+			</left>
+			<center>
+				<VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+					<children>
+						<HBox alignment="CENTER" prefHeight="65.0" prefWidth="200.0">
+							<VBox.margin>
+								<Insets left="20.0" right="20.0" />
+							</VBox.margin>
+							<children>
+								<Label prefHeight="29.0" prefWidth="88.0" text="language" textFill="#878787">
+									<font>
+										<Font name="Cambria Bold" size="18.0" />
+									</font>
+								</Label>
+								<Label prefHeight="29.0" prefWidth="77.0" text="English" textFill="#878787" underline="true">
+									<font>
+										<Font name="Cambria" size="18.0" />
+									</font>
+								</Label>
+								<Pane prefHeight="65.0" prefWidth="393.0" HBox.hgrow="ALWAYS" />
+								<Label prefHeight="62.0" prefWidth="64.0" textFill="#878787">
+									<font>
+										<Font name="Cambria" size="18.0" />
+									</font>
+								</Label>
+                        <Label fx:id="logOutBtn" onMouseClicked="#logOut" prefHeight="62.0" prefWidth="73.0" style="-fx-cursor: hand;" text="Log-Out" textFill="#878787">
+                           <font>
+                              <Font name="Cambria" size="18.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="homeBtn" fitHeight="50.0" fitWidth="55.0" onMouseClicked="#goToHome" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                           <image>
+                              <Image url="@../images/home.png" />
+                           </image>
+                        </ImageView>
+							</children>
+						</HBox>
+						<HBox prefHeight="20.0" prefWidth="805.0">
+							<children>
+								<Pane prefHeight="84.0" prefWidth="96.0" />
+								<HBox fx:id="addNewFruit" alignment="CENTER" onMouseClicked="#addNewFruit" prefHeight="43.0" prefWidth="340.0" styleClass="free-delivery-card" stylesheets="@../values/style.css">
+									<children>
+										<VBox alignment="CENTER" prefHeight="100.0" prefWidth="214.0">
+											<children>
+												<Label prefHeight="29.0" prefWidth="175.0" text="View Most Sales" textFill="#878787">
+													<font>
+														<Font name="Cambria Bold" size="18.0" />
+													</font>
+												</Label>
+											</children>
+										</VBox>
+										<ImageView fitHeight="49.0" fitWidth="56.0" opacity="0.67" pickOnBounds="true" preserveRatio="true">
+											<image>
+												<Image url="@../images/add.png" />
+											</image>
+										</ImageView>
+									</children>
+								</HBox>
+								<Pane prefHeight="84.0" prefWidth="96.0" HBox.hgrow="ALWAYS" />
+								<HBox alignment="CENTER" prefHeight="100.0" prefWidth="336.0" styleClass="shopping-online-card" stylesheets="@../values/style.css">
+									<children>
+										<VBox alignment="CENTER" prefHeight="100.0" prefWidth="203.0">
+											<children>
+												<Label prefHeight="29.0" prefWidth="190.0" text="View Order History " textFill="#878787">
+													<font>
+														<Font name="Cambria Bold" size="18.0" />
+													</font>
+												</Label>
+											</children>
+										</VBox>
+										<ImageView fitHeight="49.0" fitWidth="56.0" opacity="0.48" pickOnBounds="true" preserveRatio="true">
+											<image>
+												<Image url="@../images/history.jpg" />
+											</image>
+										</ImageView>
+									</children>
+								</HBox>
+								<Pane prefHeight="84.0" prefWidth="96.0" />
+							</children>
+							<VBox.margin>
+								<Insets left="20.0" right="20.0" top="10.0" />
+							</VBox.margin>
+						</HBox>
+                  <HBox alignment="CENTER" prefHeight="93.0" prefWidth="845.0">
+                     <children>
+                        <Label contentDisplay="CENTER" text="FRUIT'S  STOCK" textFill="#1844cc">
+                           <font>
+                              <Font name="Book Antiqua" size="29.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <AnchorPane prefHeight="410.0" prefWidth="845.0">
+                     <children>
+                        <ButtonBar layoutX="185.0" layoutY="257.0" prefHeight="40.0" prefWidth="249.0" />
+                        <ProgressIndicator fx:id="pI" layoutX="77.0" layoutY="-85.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="423.0" prefWidth="625.0" visible="false" />
+                        <TableView fx:id="table" layoutX="125.0" layoutY="27.0" prefHeight="367.0" prefWidth="619.0">
+                          <columns>
+                            <TableColumn fx:id="col_name" prefWidth="336.0" text="Name" />
+                            <TableColumn fx:id="col_qty" prefWidth="154.0" text="Quantity" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+					</children>
+				</VBox>
+			</center>
+		</BorderPane>
+	</children>
+</AnchorPane>
